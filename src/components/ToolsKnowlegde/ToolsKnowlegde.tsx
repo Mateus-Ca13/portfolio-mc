@@ -1,5 +1,4 @@
 import { motion } from 'motion/react'
-import { div } from 'motion/react-client'
 import { BiLogoTypescript } from 'react-icons/bi'
 import { FaBootstrap, FaCss3Alt, FaGitAlt, FaHtml5, FaJsSquare, FaReact } from 'react-icons/fa'
 import { RiNodejsFill, RiSupabaseLine, RiTailwindCssFill } from 'react-icons/ri'
