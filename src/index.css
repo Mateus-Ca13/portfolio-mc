@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-lobster: "Lobster", sans-serif;
+  --text-10xl: 9rem;
+  --color-primary: #5fa81e
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+}
