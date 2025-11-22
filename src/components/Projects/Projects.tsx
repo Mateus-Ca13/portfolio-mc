@@ -1,4 +1,3 @@
-import React from 'react'
 import { RevealInView } from '../RevealInView/RevealInView'
 import ProjectCard, { type ProjectCardProps } from './ProjectCard/ProjectCard'
 
