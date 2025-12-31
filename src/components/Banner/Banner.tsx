@@ -7,10 +7,10 @@ export default function Banner() {
 
     
   return (
-    <div className="w-full px-24 bg-[url('./banner2.jpg')] bg-cover bg-center bg-no-repeat overflow-hidden relative h-screen flex items-center justify-center" style={{ perspective: 1000 }}>
+    <div className="w-full px-24 bg-[url('/banner2.jpg')] bg-cover bg-center bg-no-repeat overflow-hidden relative h-screen flex items-center justify-center" style={{ perspective: 1000 }}>
         <div
         className="px-8 pt-18 sm:pt-0  flex lg:flex-row flex-col absolute text-black z-20 gap-12">
-            <div className="flex flex-col justify-center xl:items-start items-center text-center  gap-8">
+            <div className="flex flex-col justify-center xl:items-start items-center! text-center gap-8">
             <motion.div
             initial={{opacity: 0, x:-40}}
             animate={{opacity: 1, x: 0}}
