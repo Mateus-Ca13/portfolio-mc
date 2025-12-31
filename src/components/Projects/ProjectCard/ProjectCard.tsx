@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 import { useDialogStore } from "../../../store/useDialogStore"
 import { BiExpand } from "react-icons/bi"
 import ProjectStackSpan from "./ProjectStackSpan/ProjectStackSpan"
-import { motion } from "motion/react"
+import { AnimatePresence, motion } from "motion/react"
 
 export type ProjectCardProps = {
     name: string
@@ -39,12 +39,13 @@ export default function ProjectCard({name, description, githubBe, githubFe, demo
                 disabled={!(githubBe || githubFe)} 
                 className="relative w-full lg:w-max justify-center bg-purple-800 hover:bg-purple-900 flex items-center disabled:opacity-50 disabled:cursor-default text-white font-semibold py-4 px-12 rounded-lg  duration-200">
                 Ver no Github <FaGithub className="ms-2 text-xl"/> 
+                <AnimatePresence>
                 {onRepoButtonHover && 
                     <motion.div 
                     initial={{opacity: 0, bottom: -30}}
                     animate={{opacity: 1, bottom: -45}}
-                    exit={{opacity: 0, bottom: 0}}
-                    className="absolute bg-purple-900 w-full h-full rounded-lg justify-center items-center flex">
+                    exit={{opacity: 0, bottom: -30}}
+                    className="absolute bg-purple-900 w-full h-full rounded-lg justify-center items-center flex z-10">
                         <Link to={githubFe?? '/'} target="_blank" className="w-1/2 underline hover:opacity-80 duration-200">
                             <button disabled={!githubFe} className="disabled:opacity-55 disabled:cursor-default hover:cursor-pointer">Front-end</button>
                         </Link>
@@ -54,6 +55,7 @@ export default function ProjectCard({name, description, githubBe, githubFe, demo
                         </Link>
                     </motion.div>
                 }
+                </AnimatePresence>
                 </button>
             <Link to={demo?? ''} target="_blank" className="w-full lg:w-max"><button disabled={!demo} className="w-full lg:w-max justify-center bg-primary flex items-center disabled:opacity-50 disabled:cursor-default text-white font-semibold py-4 px-12 rounded-lg hover:brightness-90 duration-200 cursor-pointer">Testar a demo <GrTest  className="ms-2 text-xl"/></button></Link>
 

@@ -7,8 +7,8 @@ export default function Projects() {
         {name: "Portfolio",
             description: "Este é o meu portfólio pessoal, desenvolvido com React e TypeScript. Ele apresenta meus projetos, habilidades e informações de contato, proporcionando uma visão abrangente da minha experiência como desenvolvedor.",
             images: ["images/project1_2.png", "images/project1_1.png"],
-            githubFe: "https://github.com/luizfelipe-lf/portfolio",
-            demo: "https://portfolio-luizfelipe-lf.vercel.app/",
+            githubFe: "https://github.com/Mateus-Ca13/portfolio-mc",
+            demo: "https://portfolio-mc-seven.vercel.app/",
             techs: ["React.js", "Typescript", "Framer motion", "TailwindCSS", ],
             video: "/videos/project1_video.mp4"
 
