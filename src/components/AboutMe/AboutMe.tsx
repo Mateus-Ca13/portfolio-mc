@@ -5,7 +5,6 @@ import { FaArrowTrendUp } from 'react-icons/fa6'
 import { LuBrain } from 'react-icons/lu'
 import { TbTools } from 'react-icons/tb'
 
-
 export default function AboutMe() {
 
     const screenWidth = window.innerWidth

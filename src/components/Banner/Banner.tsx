@@ -1,11 +1,6 @@
 import { motion } from "motion/react"
 
-
-
-
-export default function Banner() {
-
-    
+export default function Banner() {  
   return (
     <div className="w-full px-24 bg-[url('/banner2.jpg')] bg-cover bg-center bg-no-repeat overflow-hidden relative h-screen flex items-center justify-center" style={{ perspective: 1000 }}>
         <div

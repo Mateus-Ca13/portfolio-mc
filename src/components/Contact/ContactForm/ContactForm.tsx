@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function ContactForm() {
   return (
     <form action="https://formspree.io/f/mvzgpwen" method="POST" className="w-full flex flex-col gap-4">

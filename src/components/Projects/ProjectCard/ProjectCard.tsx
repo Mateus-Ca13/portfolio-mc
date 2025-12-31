@@ -1,4 +1,4 @@
-import { use, useState } from "react"
+import { useState } from "react"
 import { FaGithub } from "react-icons/fa"
 import { GrTest } from "react-icons/gr"
 import { Link } from "react-router-dom"
