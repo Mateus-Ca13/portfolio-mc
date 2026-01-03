@@ -19,7 +19,8 @@ export default function Projects() {
             techs: ["React.js", "Typescript", "Express.js", "PostgreSQL", "Prisma ORM", "JWT", "Zod", "MUI", "Zustand", "React Query", "Axios", "Bcrypt"],
             video: "/videos/project2_video.mp4",
             githubFe: "https://github.com/Mateus-Ca13/front-storage-control.git",
-            githubBe: "https://github.com/Mateus-Ca13/api-storage-control.git"
+            githubBe: "https://github.com/Mateus-Ca13/api-storage-control.git",
+            demo: "https://divinooleiro.cloud/login"
 
 
         },

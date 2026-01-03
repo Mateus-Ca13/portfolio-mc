@@ -31,7 +31,7 @@ export default function Header() {
             </motion.div>
         </div>    
         <div>
-            <IoIosMenu onClick={toggleMenuIsOpen} className={` md:hidden text-3xl md:text-4xl mr-4 text-gray-700 hover:text-primary cursor-pointer duration-200 ${menuIsOpen ? 'text-primary scale-105' : ''}`}/>
+            <IoIosMenu onClick={toggleMenuIsOpen} className={` md:hidden text-3xl md:text-4xl mr-4 text-gray-700  cursor-pointer duration-200 ${menuIsOpen ? 'text-primary scale-105' : ''}`}/>
             <AnimatePresence>
             {menuIsOpen && 
             <motion.div
@@ -40,9 +40,9 @@ export default function Header() {
             exit={{ opacity: 0, y: -20 }}
             className='w-full absolute top-16 right-0 bg-gray-50 flex flex-col justify-center items-center shadow-lg rounded-xl p-4 font-bold gap-4'>
                 
-                <Link to={'/#about'} onClick={toggleMenuIsOpen} className=''>Sobre mim</Link>
-                <Link to={'/#projects'} onClick={toggleMenuIsOpen} className=''>Projetos</Link>
-                <Link to={'/#contacts'} onClick={toggleMenuIsOpen} className=''>Contatos</Link>
+                <Link to={'/#about'} onClick={toggleMenuIsOpen}>Sobre mim</Link>
+                <Link to={'/#projects'} onClick={toggleMenuIsOpen}>Projetos</Link>
+                <Link to={'/#contacts'} onClick={toggleMenuIsOpen}>Contatos</Link>
             </motion.div>}
             </AnimatePresence>
         </div>

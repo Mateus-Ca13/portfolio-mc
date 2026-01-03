@@ -41,7 +41,7 @@ export default function Contact() {
                                 <div className='flex items-start gap-8'>
                                     <FaWhatsapp className='text-4xl ms-2 text-primary'/>
                                     <div className='flex items-start flex-col'>
-                                        <p className='font-bold'>E-mail</p>
+                                        <p className='font-bold'>Celular</p>
                                         <p className='break-all text-sm sm:text-base text-start'>+55 (48) 98485-0081</p>
                                     </div>
                                 </div>
