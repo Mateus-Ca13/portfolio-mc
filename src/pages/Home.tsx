@@ -4,12 +4,14 @@ import Projects from '../components/Projects/Projects'
 import ToolsKnowlegde from '../components/ToolsKnowlegde/ToolsKnowlegde'
 import ExpandImageDialog from '../components/ExpandImageDialog/ExpandImageDialog'
 import Contact from '../components/Contact/Contact'
+import Skills from '../components/Skills/Skills'
 
 export default function Home() {
   return (
     <section className='w-full'>
     <Banner/>
     <AboutMe/>
+    <Skills/>
     <ToolsKnowlegde/>
     <div className="h-18 lg:h-32 bg-linear-to-t to-transparent from-gray-200"></div>
     <Projects/>

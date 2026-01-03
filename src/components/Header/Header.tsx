@@ -24,14 +24,17 @@ export default function Header() {
                 <Link to={'/#about'} className=''>Sobre mim</Link>
             </motion.div>
             <motion.div whileHover={{y: -2, color: 'var(--color-primary)'}}>
+                <Link to={'/#skills'} className=''>Habilidades</Link>
+            </motion.div>
+            <motion.div whileHover={{y: -2, color: 'var(--color-primary)'}}>
                 <Link to={'/#projects'} className=''>Projetos</Link>
             </motion.div>
             <motion.div whileHover={{y: -2, color: 'var(--color-primary)'}}>
                 <Link to={'/#contacts'} className=''>Contatos</Link>
             </motion.div>
         </div>    
-        <div>
-            <IoIosMenu onClick={toggleMenuIsOpen} className={` md:hidden text-3xl md:text-4xl mr-4 text-gray-700  cursor-pointer duration-200 ${menuIsOpen ? 'text-primary scale-105' : ''}`}/>
+        <div className=' md:hidden'>
+            <IoIosMenu onClick={toggleMenuIsOpen} className={` text-3xl md:text-4xl mr-4 text-gray-700  cursor-pointer duration-200 ${menuIsOpen ? 'text-primary scale-105' : ''}`}/>
             <AnimatePresence>
             {menuIsOpen && 
             <motion.div
@@ -41,6 +44,7 @@ export default function Header() {
             className='w-full absolute top-16 right-0 bg-gray-50 flex flex-col justify-center items-center shadow-lg rounded-xl p-4 font-bold gap-4'>
                 
                 <Link to={'/#about'} onClick={toggleMenuIsOpen}>Sobre mim</Link>
+                <Link to={'/#skills'} onClick={toggleMenuIsOpen}>Habilidades</Link>
                 <Link to={'/#projects'} onClick={toggleMenuIsOpen}>Projetos</Link>
                 <Link to={'/#contacts'} onClick={toggleMenuIsOpen}>Contatos</Link>
             </motion.div>}
