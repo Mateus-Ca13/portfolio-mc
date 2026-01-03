@@ -1,9 +1,5 @@
 import { motion } from 'motion/react'
 import { RevealInView } from '../RevealInView/RevealInView'
-import { FaRegLightbulb } from 'react-icons/fa'
-import { FaArrowTrendUp } from 'react-icons/fa6'
-import { LuBrain } from 'react-icons/lu'
-import { TbTools } from 'react-icons/tb'
 
 export default function AboutMe() {
 
