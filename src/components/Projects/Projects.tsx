@@ -4,13 +4,13 @@ import ProjectCard, { type ProjectCardProps } from './ProjectCard/ProjectCard'
 export default function Projects() {
 
     const projects: ProjectCardProps[] = [
-        {name: "Portfolio",
-            description: "Este é o meu portfólio pessoal, desenvolvido com React e TypeScript. Ele apresenta meus projetos, habilidades e informações de contato, proporcionando uma visão abrangente da minha experiência como desenvolvedor.",
-            images: ["images/project1_2.png", "images/project1_1.png"],
-            githubFe: "https://github.com/Mateus-Ca13/portfolio-mc",
-            demo: "https://portfolio-mc-seven.vercel.app/",
-            techs: ["React.js", "Typescript", "Framer motion", "TailwindCSS", ],
-            video: "/videos/project1_video.mp4"
+        {name: "Wishly - Sua lista de desenhos online",
+            description: "O Wishly é um SaaS B2C freemium para gestão centralizada de listas de desejos. Desenvolvido como um Progressive Web App (PWA) utilizando Next.js 16+ e Supabase, o projeto prioriza alta performance de renderização e escalabilidade de banco de dados.",
+            images: ["images/project5_2.png", "images/project5_1.png"],
+            githubFe: "https://github.com/Mateus-Ca13/Wishly.git",
+            demo: "https://appwishly.vercel.app/",
+        techs: ["Next.js +16", "Typescript", "Supabase", "Framer motion", "TailwindCSS", "Shadcn/ui",  "Next intl", "Nanoid", "Slugify", "Zustand", "zod", "React Hook Form", "@ducanh2912/next-pwa" ],
+            video: "/videos/project5_video.mp4"
 
         },
         {name: "Controle de Estoque - Divino Oleiro",

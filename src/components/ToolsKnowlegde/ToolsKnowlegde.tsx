@@ -1,12 +1,14 @@
 import { motion } from 'motion/react'
 import { BiLogoTypescript } from 'react-icons/bi'
 import { FaBootstrap, FaCss3Alt, FaGitAlt, FaHtml5, FaJsSquare, FaReact } from 'react-icons/fa'
-import { RiNodejsFill, RiSupabaseLine, RiTailwindCssFill } from 'react-icons/ri'
+import { FcNext } from 'react-icons/fc'
+import { RiNextjsFill, RiNodejsFill, RiSupabaseLine, RiTailwindCssFill } from 'react-icons/ri'
 import { SiExpress, SiMui, SiPrisma, SiReactrouter, SiShadcnui, SiZod } from 'react-icons/si'
 
 export default function ToolsKnowlegde() {
 
     const techs = [
+    { name: "Next.js", icon: <RiNextjsFill className="text-3xl md:text-6xl lg:text-8xl" /> },
     { name: "React.js", icon: <FaReact className="text-3xl md:text-6xl lg:text-8xl" /> },
     { name: "Typescript", icon: <BiLogoTypescript className="text-3xl md:text-6xl lg:text-8xl" /> },
     { name: "Node.js", icon: <RiNodejsFill className="text-3xl md:text-6xl lg:text-8xl" /> },

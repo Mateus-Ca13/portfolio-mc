@@ -49,7 +49,7 @@ export default function Skills() {
             </div>
             <div className='flex flex-col  xl:px-6 gap-8 justify-center items-start text-start w-full xl:w-2/3'>
                 <p className=' md:text-2xl'>Hoje, venho expandindo meu conhecimento e assumindo o papel de desenvolvedor FullStack, com experiência tanto no desenvolvimento 
-                    de interfaces, utilizando React.js, TailwindCSS, MUI, Zustand, etc., quanto no back-end, 
+                    de interfaces, utilizando, Next.js, React.js, TailwindCSS, MUI, Zustand, etc., quanto no back-end, 
                     em ambientes Node.js, utilizando Express.js, Prisma ORM e bancos de dados relacionais</p>                
                 <p className=' md:text-2xl'>Além disso, possuo experiência com a criação de APIs RESTful, autenticação JWT, e integrações com serviços de terceiros. Tenho experiência no desenvolvimento
                     de aplicações responsivas e otimizadas para diferentes dispositivos, garantindo uma ótima experiência do usuário.</p>

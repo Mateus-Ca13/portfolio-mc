@@ -20,7 +20,7 @@ export default function Banner() {
             initial={{opacity: 0, x:-40}}
             animate={{opacity: 1.5, x: 0}}
             transition={{ duration: 1, delay: 3}} 
-            className="text-xl xl:text-4xl font-bold">Desenvolvedor Front-End <span className="text-gray-300">|</span> React.js <span className="text-gray-300">|</span> Typescript</motion.div>
+            className="text-lg xl:text-3xl font-bold">Desenvolvedor Front-End <span className="text-gray-300">|</span> Next.js <span className="text-gray-300">|</span> React.js <span className="text-gray-300">|</span> Typescript</motion.div>
             </div>
             <motion.div
             className="flex justify-center items-center"
