@@ -1,7 +1,6 @@
 import { motion } from 'motion/react'
 import { BiLogoTypescript } from 'react-icons/bi'
 import { FaBootstrap, FaCss3Alt, FaGitAlt, FaHtml5, FaJsSquare, FaReact } from 'react-icons/fa'
-import { FcNext } from 'react-icons/fc'
 import { RiNextjsFill, RiNodejsFill, RiSupabaseLine, RiTailwindCssFill } from 'react-icons/ri'
 import { SiExpress, SiMui, SiPrisma, SiReactrouter, SiShadcnui, SiZod } from 'react-icons/si'
 
