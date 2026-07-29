@@ -1,10 +1,8 @@
 import { RevealInView } from '../RevealInView/RevealInView'
 import ProjectCard, { type ProjectCardProps } from './ProjectCard/ProjectCard'
 
-export default function Projects() {
-
-    const projects: ProjectCardProps[] = [
-        {name: "Wishly - Sua lista de desenhos online",
+const projects: ProjectCardProps[] = [
+        {name: "Wishly - Sua lista de desejos online",
             description: "O Wishly é um SaaS B2C freemium para gestão centralizada de listas de desejos. Desenvolvido como um Progressive Web App (PWA) utilizando Next.js 16+ e Supabase, o projeto prioriza alta performance de renderização e escalabilidade de banco de dados.",
             images: ["images/project5_2.png", "images/project5_1.png"],
             githubFe: "https://github.com/Mateus-Ca13/Wishly.git",
@@ -45,20 +43,50 @@ export default function Projects() {
 
         },
 
-    ] 
+    ]
 
+export default function Projects() {
   return (
-  
-        <div id='projects' className='bg-gray-200 flex flex-col justify-center items-center text-center'>
-            <RevealInView once threshold={0.1}>
-                <h2 className='text-2xl md:text-4xl mb-8 font-bold text-primary'>Projetos <span className="text-gray-300">|</span> Cases</h2>
-                <div className='mb-14 md:mb-32 mx-4 md:mx-12'>
+        <section
+            id="projects"
+            className="relative isolate overflow-hidden bg-gray-50 px-6 pb-28 pt-16 sm:px-10 lg:px-12 lg:pb-40 lg:pt-24"
+        >
+            <div
+                className="pointer-events-none absolute inset-0"
+                style={{
+                    backgroundImage: [
+                        "radial-gradient(circle at 20% 28%, rgba(95,168,30,0.06) 0%, transparent 55%)",
+                        "radial-gradient(circle at 80% 68%, rgba(190,242,100,0.07) 0%, transparent 52%)",
+                        "radial-gradient(circle at 78% 12%, rgba(255,255,255,0.75) 0%, transparent 36%)",
+                    ].join(", "),
+                }}
+            />
+
+            <RevealInView once threshold={0.1} className="relative mx-auto max-w-7xl">
+                <div className="mb-12 flex text-center flex-col items-center justify-center gap-6 lg:mb-18 lg:grid-cols-[1fr_0.72fr]">
+                    <div>
+
+                        <h2 className="mt-3 text-3xl font-bold leading-tight text-gray-950 sm:text-4xl lg:text-5xl">
+                            Cases <span className="text-primary">&</span> Projetos
+                            <span className="block text-2xl text-gray-400">Experiências em destaque</span>
+                        </h2>
+                    </div>
+                    <p className="max-w-xl text-base  leading-relaxed text-gray-600 sm:text-lg lg:justify-self-end">
+                        Produtos completos, da interface à infraestrutura, construídos para
+                        resolver necessidades reais com clareza, desempenho e boa experiência.
+                    </p>
+                </div>
+
+                <div className="space-y-8 lg:space-y-12">
                     {projects.map((project, index) => (
-                        <ProjectCard key={index} {...project} />
+                        <ProjectCard
+                            key={project.name}
+                            {...project}
+                            index={index}
+                        />
                     ))}
                 </div>
-             </RevealInView> 
-        </div>
-   
+             </RevealInView>
+        </section>
   )
 }

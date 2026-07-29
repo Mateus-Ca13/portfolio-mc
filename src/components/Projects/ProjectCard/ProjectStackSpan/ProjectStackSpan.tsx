@@ -1,39 +1,42 @@
-import { motion } from 'motion/react'
-import { useCallback, useState } from 'react'
-import { MdOutlineExpandMore } from 'react-icons/md'
-
 type ProjectStackSpanProps = {
     techs: string[]
 }
 
-
 export default function ProjectStackSpan({techs}: ProjectStackSpanProps) {
+    const visibleLimit = 9
+    const visibleTechs = techs.slice(0, visibleLimit)
+    const hiddenTechs = techs.slice(visibleLimit)
+    const remainingTechs = techs.length - visibleTechs.length
 
-    const [isHovered, setIsHovered] = useState(false)
-
-    const width = useCallback(() => {
-        return window.innerWidth;
-    }, [])
-
-
-  return (
-    <div className='relative '>
-        <div onMouseOver={()=> (techs.length > 6 && width() >= 768) && setIsHovered(true)} onMouseLeave={()=>setIsHovered(false)} className='flex px-4  gap-2 md:gap-4 flex-wrap bg-gray-100 p-2 rounded-lg my-6 items-center justify-center'>
-            {techs.slice(0, 6).map((t, index) => <><p className='text-sm lg:text-lg font-bold'>{t} </p>{index !== techs.slice(0, 6).length -1? <span className="font-bold text-gray-400">|</span> : <></>}</>)}
-            {techs.length > 6 && <MdOutlineExpandMore   className='hidden md:block text-xl text-gray-400'/>}
+    return (
+        <div className="mt-7 flex flex-wrap gap-2">
+            {visibleTechs.map((tech) => (
+                <span
+                    key={tech}
+                    className="rounded-full border border-gray-200 bg-gray-50 px-3 py-1.5 text-xs font-bold text-gray-600 transition-[border-color,color,background-color] duration-200 hover:border-primary/35 hover:bg-primary/5 hover:text-primary"
+                >
+                    {tech}
+                </span>
+            ))}
+            {remainingTechs > 0 && (
+                <span
+                    tabIndex={0}
+                    className="group/more relative cursor-help rounded-full border border-primary/20 bg-primary/8 px-3 py-1.5 text-xs font-bold text-primary outline-none transition-colors hover:border-primary/45 hover:bg-primary/12 focus-visible:ring-2 focus-visible:ring-primary/30"
+                    aria-label={`Mais ${remainingTechs} tecnologias: ${hiddenTechs.join(", ")}`}
+                >
+                    +{remainingTechs}
+                    <span
+                        role="tooltip"
+                        className="pointer-events-none absolute bottom-full left-1/2 z-30 mb-3 w-max max-w-64 -translate-x-1/2 translate-y-1 rounded-xl border border-gray-200 bg-gray-950 px-4 py-3 text-left text-xs font-semibold leading-relaxed text-white opacity-0 shadow-xl transition-all duration-200 group-hover/more:translate-y-0 group-hover/more:opacity-100 group-focus/more:translate-y-0 group-focus/more:opacity-100"
+                    >
+                        <span className="mb-1.5 block text-[0.65rem] font-bold uppercase tracking-[0.18em] text-primary">
+                            Outras tecnologias
+                        </span>
+                        {hiddenTechs.join(" • ")}
+                        <span className="absolute left-1/2 top-full h-2 w-2 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-gray-950" />
+                    </span>
+                </span>
+            )}
         </div>
-        {isHovered &&
-        <motion.div
-            initial={{opacity: 0, y: -5}}
-            animate={{opacity: 1, y: 0}}
-            transition={{duration: 0.3}}
-            className='absolute -bottom-6 left-0 w-full xl:w-max flex-wrap bg-gray-100 z-10 text-black text-sm px-3 py-2 rounded-md shadow-lg flex justify-start items-center gap-2'>
-                {techs.map((t, index) => <p className='font-bold'>{t}{index !== techs.length -1? <span className="font-bold">,</span> : <></>}</p>)}
-        </motion.div>
-        }
-    </div>
-  )
+    )
 }
-
-
-

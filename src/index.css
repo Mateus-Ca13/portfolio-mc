@@ -2,10 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 @import "tailwindcss";
 
+:root {
+  --color-primary: #5fa81e;
+  --color-primary-dark: #3c6817;
+}
+
 @theme {
   --font-lobster: "Lobster", sans-serif;
   --text-10xl: 9rem;
-  --color-primary: #5fa81e
+  --color-primary: var(--color-primary);
+  --color-primary-dark: var(--color-primary-dark);
 }
 
 body {
