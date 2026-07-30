@@ -131,8 +131,8 @@ export default function ProjectCard({
                         }}
                     />
 
-                    {/* Mobile: rail horizontal deslizável */}
-                    <div className="relative lg:hidden">
+                    {isMobile ? (
+                    <div className="relative">
                         <div
                             ref={mobileRailRef}
                             className="flex w-full justify-start snap-x snap-mandatory gap-4 overflow-x-auto overscroll-x-contain scroll-pl-0 scrollbar-none pb-1"
@@ -147,6 +147,7 @@ export default function ProjectCard({
                                     className="h-full w-auto max-w-none rounded-2xl object-contain transition-[filter] duration-200 group-hover/media:brightness-75"
                                     src={images[0]}
                                     alt={`Tela principal do projeto ${name}`}
+                                    loading="lazy"
                                 />
                             </button>
 
@@ -160,6 +161,7 @@ export default function ProjectCard({
                                     className="h-full w-auto max-w-none rounded-2xl object-contain transition-[filter] duration-200 group-hover/media:brightness-75"
                                     src={images[1]}
                                     alt={`Outra tela do projeto ${name}`}
+                                    loading="lazy"
                                 />
                             </button>
 
@@ -179,9 +181,8 @@ export default function ProjectCard({
                             <FaArrowsLeftRight  aria-hidden="true" />
                         </div>
                     </div>
-
-                    {/* Desktop: grade vídeo + imagens */}
-                    <div className="relative p-8 hidden gap-4 lg:grid lg:grid-rows-[minmax(0,14rem)_minmax(0,9rem)] xl:grid-rows-[minmax(0,16rem)_minmax(0,10rem)]">
+                    ) : (
+                    <div className="relative grid gap-4 p-8 grid-rows-[minmax(0,14rem)_minmax(0,9rem)] xl:grid-rows-[minmax(0,16rem)_minmax(0,10rem)]">
                         <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/40">
                             <video
                                 className="h-full w-full object-contain"
@@ -203,6 +204,7 @@ export default function ProjectCard({
                                     className="max-h-full max-w-full rounded-lg object-contain shadow-xl transition-transform duration-500 group-hover/media:scale-[1.035]"
                                     src={images[0]}
                                     alt={`Tela principal do projeto ${name}`}
+                                    loading="lazy"
                                 />
                                 <span className="absolute right-2 top-2 rounded-full bg-gray-950/70 p-2 text-white opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover/media:opacity-100">
                                     <LuMaximize2 />
@@ -219,6 +221,7 @@ export default function ProjectCard({
                                     className="max-h-full max-w-full rounded-lg object-contain shadow-xl transition-transform duration-500 group-hover/media:scale-[1.035]"
                                     src={images[1]}
                                     alt={`Outra tela do projeto ${name}`}
+                                    loading="lazy"
                                 />
                                 <span className="absolute right-2 top-2 rounded-full bg-gray-950/70 p-2 text-white opacity-0 backdrop-blur-sm transition-opacity duration-300 group-hover/media:opacity-100">
                                     <LuMaximize2 />
@@ -226,6 +229,7 @@ export default function ProjectCard({
                             </button>
                         </div>
                     </div>
+                    )}
                 </div>
             </div>
         </motion.article>

@@ -49,6 +49,7 @@ export default function ExpandImageDialog() {
                         src={photoSrc}
                         className="max-h-full max-w-full object-contain"
                         alt="Imagem ampliada do projeto"
+                        loading="lazy"
                     />
                 </div>
             </motion.div>

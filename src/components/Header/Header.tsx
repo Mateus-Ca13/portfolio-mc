@@ -24,7 +24,7 @@ export default function Header() {
     }}
     >
         <NameLogo compactDelay={5600} />
-        <div className='hidden md:flex items-center justify-center gap-4 px-6 lg:gap-7 xl:gap-10 xl:px-12'>
+        <div className='hidden xl:flex items-center justify-center gap-4 px-6 xl:gap-7 xl:px-12'>
             <motion.div className="rounded-full px-4 py-2 transition-colors duration-200 hover:bg-primary/10 hover:text-primary" whileHover={{y: -2}}>
                 <Link to={'/#about'} className=''>Sobre mim</Link>
             </motion.div>
@@ -41,7 +41,7 @@ export default function Header() {
                 <Link to={'/#contacts'} className=''>Contatos</Link>
             </motion.div>
         </div>    
-        <div className=' md:hidden'>
+        <div className=' xl:hidden'>
             <IoIosMenu onClick={toggleMenuIsOpen} className={` text-3xl md:text-4xl mr-4 text-gray-700  cursor-pointer duration-200 ${menuIsOpen ? 'text-primary scale-105' : ''}`}/>
             <AnimatePresence>
             {menuIsOpen && 
